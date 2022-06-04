@@ -1,4 +1,8 @@
-textarea {
-    width: 260px;
-    font-size: 16px;
+.button { 
+    color: aqua;
+    background-color: blueviolet;
+    border: 10px;
+    border-color: aqua;
+    width: 250px;
+    height: 250px;
 }
