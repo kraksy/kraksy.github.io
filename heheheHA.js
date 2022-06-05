@@ -3,8 +3,8 @@ const button = document.querySelector('.button')
 
 const anims = () => {
     anime({
-        targets: button,
-        translateX: 250
+        targets: ye,
+        translateXS: 250
     })
 }
 
