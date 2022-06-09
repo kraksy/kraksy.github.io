@@ -2,34 +2,22 @@
 window.addEventListener('load', () =>{
 
     let paint = false;
-    let butn = false;
-    
 
     const canvas = document.querySelector('#canvas');
     const ctx = canvas.getContext('2d')
-    const mb = document.getElementById('mb')
 
-    mb.addEventListener("click")
-    
-
-    function bn(e) {
-        butn = true
-
-        if (butn = true) { 
-            events()
-        }
-    }
-
-    function start(e) {
+ 
+    function start() {
         paint = true;
     }
 
-    function stop(e) {
+    function stop() {
         paint = false;
         ctx.beginPath(); 
     }
 
     function draw(e) {
+        if(!paint) return;
 
         ctx.lineWidth = 10;
         ctx.lineCap ="round";
@@ -42,12 +30,8 @@ window.addEventListener('load', () =>{
         
     }
 
-    function events(e) {
-
-        canvas.addEventListener("mousedown",start)
-        canvas.addEventListener("mouseup", stop)
-        canvas.addEventListener("mousemove", draw)
-
-    }
-
+    canvas.addEventListener("mousedown", start)
+    canvas.addEventListener("mouseup", stop)
+    canvas.addEventListener("mousemove", draw)
+    
 });
