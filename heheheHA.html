@@ -9,30 +9,28 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cirrus-ui/dist/cirrus.min.css">
     <link rel="stylesheet" href="heheheHA.css">
+    <script src="heheheHA.js"></script>
     <title></title>
 </head>
 <body>
-    <div class="hero fullscreen">
+    <div id="splash-img" class="hero fullscreen hero-img parallax-img">
         <div class="hero-body">
             <div class="content">
 
                 <div class="u-flex u-center h-100p">
-                    <canvas id="canvas" class="bg-light"></canvas>
+                    <canvas id="canvas"></canvas>
                 </div>
 
                 <div class="u-flex u-center h-100p">
                     <div class="btn-group">
-                        <button class="btn-dark btn--circle btn--xl"><b>brush</b></button>
-                        <button class="btn-dark btn--circle btn--xl"><b>square</b></button>
+                        <button id="mb" class="btn-dark btn--circle btn--xl"><b>brush</b></button>
+                        <button id="mb2" class="btn-dark btn--circle btn--xl"><b>square</b></button>
                     </div>
                 </div>
 
                 <div class="u-flex u-center h-100p">
-                    <div class="row level">
-                        <div class="col-xs-9 level-item"><input type="color" value="#f03d4d"></div>
-                    </div>
+                    <button class="btn-transparent btn--circle"><input type="color" value="#f03d4d"></button>     
                 </div>
-                
             </div>
         </div>
     </div>
