@@ -1,3 +1,4 @@
+import 'cirrus-ui';
 
 const mb = document.getElementById("mb");
 const mb2 = document.getElementById("mb2");
