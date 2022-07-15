@@ -1,25 +1,44 @@
-
-const mb = document.getElementById("mb");
-const mb2 = document.getElementById("mb2");
-
-mb.addEventListener("click", () =>{
+window.addEventListener('load', () =>{
 
     let paint = false;
+    let testBool = false;
+    let end = false;
 
     const canvas = document.querySelector('#canvas');
     const ctx = canvas.getContext('2d')
+    const mb = document.getElementById('mb')
 
- 
-    function start() {
+    mb.addEventListener("click", bn)
+
+
+    function bn(e) {
+        testBool = !testBool;
+
+        if (testBool = true) {
+            events()
+        }
+        if (testBool = false) {
+            end = true;
+        }
+
+        console.log(testBool)
+        
+    }
+
+    function start(e) {
         paint = true;
     }
 
-    function stop() {
+    function stop(e) {
         paint = false;
         ctx.beginPath(); 
     }
 
     function draw(e) {
+        if(end = true) {
+            paint = false;
+        }
+
         if(!paint) return;
 
         ctx.lineWidth = 10;
@@ -30,13 +49,15 @@ mb.addEventListener("click", () =>{
         ctx.stroke();
         ctx.beginPath();
         ctx.moveTo(e.clientX, e.clientY);
-        
+
     }
 
-    canvas.addEventListener("mousedown", start)
-    canvas.addEventListener("mouseup", stop)
-    canvas.addEventListener("mousemove", draw)
-    
+    function events(e) {
+        canvas.addEventListener("mousedown",start)
+        canvas.addEventListener("mouseup", stop)
+        canvas.addEventListener("mousemove", draw)
+    }
+
 });
 
 mb2.addEventListener("click", () =>{
@@ -63,3 +84,4 @@ mb2.addEventListener("click", () =>{
     });
     
 });
+

@@ -1,12 +1,8 @@
-body {
-    background-image: url(imgs.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    backdrop-filter: blur(11px);
+body { 
+    background-color: rgb(116, 153, 185);
+    margin: 0;
 }
 
 #canvas {
     border: 2px solid black;
-    max-width: 90%;
-    min-width: 90%;
-}
+} 
